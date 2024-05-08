@@ -1,5 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+// Definirano zbog komponente:
+import React, { Component } from 'react'
+
+// import Ime from './Components/funkcija';
+// import Prezime from './Components/klasa';
+
 
 function App() {
   return (
@@ -9,17 +15,28 @@ function App() {
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <div>
+        <Ime/>
+        <br/>
+        <Prezime/>
+        </div>
       </header>
     </div>
   );
+}
+
+// Komponenta definirana funkcijom
+function Ime() {
+  return <h1>Erna</h1>
+}
+
+// Komponenta definirana klasom
+class Prezime extends Component {
+  render() {
+    return (
+      <h1>Hamzagić</h1>
+    )
+  }
 }
 
 export default App;
